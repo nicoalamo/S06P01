@@ -1,16 +1,23 @@
-# Construir un programa que permita ingresar un número por teclado e imprimir
-# la tabla de multiplicar del número ingresado. Debe repetir la operación hasta
-# que se ingrese un 0 (cero).
-# Ingrese un número (0 para salir): _
+# Mostrar todos los divisores del número 990 con:
+# while, for, times.
 
-num = 1
-
-while num != 0
-  puts " "
-  puts 'Ingrese un número para ver su tabla de multiplicar (0 para salir)'
-  num = gets.chomp.to_i
-  9.times do |i|
-    print "#{num*(i+1)}"+" "
+# While
+i = 1
+while i <= 990 do
+  if 990 % i == 0
+    puts i
   end
+  i += 1
+end
 
+# For
+for i in 1..990 do
+    puts i if 990 % i == 0
+end
+
+#times
+990.times do |i|
+  if 990 % (i+1) == 0
+    puts (i+1)
+  end
 end
